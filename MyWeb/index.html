@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星空探索之旅 | 天文爱好者的小空间</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 重置与基础样式 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            color: #1a1a2e; 
+            background: #f8f9fa; 
+        }
+
+        /* 顶部 banner（简化） */
+        .banner {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .banner-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .banner-subtitle {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        /* 导航栏（简化） */
+        .nav {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 15px 0;
+            margin-bottom: 40px;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .nav a {
+            color: #1a1a2e;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .nav a:hover {
+            color: #64b5f6;
+        }
+
+        /* 主内容区（简化） */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 欢迎 section（简化） */
+        .welcome-section {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        .welcome-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .welcome-text {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* 核心内容板块（合并简化） */
+        .core-section {
+            margin-bottom: 60px;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #64b5f6;
+        }
+        .content-list {
+            list-style: none;
+        }
+        .content-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .content-item h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .content-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .banner-title { font-size: 28px; }
+            .banner-subtitle { font-size: 16px; }
+            .nav-container { gap: 20px; }
+            .nav a { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部 banner -->
+    <div class="banner">
+        <h1 class="banner-title">星空探索之旅</h1>
+        <p class="banner-subtitle">用简单的方式，遇见宇宙的浪漫</p>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="nav">
+        <div class="nav-container">
+            <a href="index.html">主页</a>
+            <a href="web/knowledge.html">天文小知识</a>
+            <a href="web/diary.html">观测日记</a>
+            <a href="web/gallery.html">图片库</a>
+            <a href="web/contact.html">联系我</a>
+        </div>
+    </div>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <!-- 欢迎 section -->
+        <section class="welcome-section">
+            <h2 class="welcome-title">欢迎来到我的星空世界！</h2>
+            <p class="welcome-text">
+                这里是天文爱好者的小天地，我会分享基础的观测技巧、有趣的宇宙知识，以及简单的星空摄影作品。<br>
+                不管你是刚入门的新手，还是喜欢偶尔抬头看天的朋友，都能在这里找到属于自己的星空故事。
+            </p>
+        </section>
+
+        <!-- 核心内容板块（天文小知识+资源推荐） -->
+        <section class="core-section">
+            <h2 class="section-title">你可能感兴趣的</h2>
+            <ul class="content-list">
+                <li class="content-item">
+                    <h3>为什么星星会“眨眼睛”？</h3>
+                    <p>星星的“眨眼”其实是地球大气层的折射作用导致的——光线穿过不稳定的大气层时，会发生多次折射，使得星星的亮度和位置看起来在变化。</p>
+                </li>
+                <li class="content-item">
+                    <h3>新手必备的观测工具</h3>
+                    <p>入门级推荐：双筒望远镜（比如8x42）、星空APP（如Stellarium）、红光手电筒（保护夜视）。不需要昂贵的设备，也能享受观测的乐趣。</p>
+                </li>
+                <li class="content-item">
+                    <h3>近期值得关注的天象</h3>
+                    <p>2025年12月：双子座流星雨（极大值12月14日）、木星合月（12月20日）。记得提前查好天气和观测时间！</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
+
