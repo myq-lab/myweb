@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我 | 星空探索之旅</title>
+    <!-- 复用主页的字体（保持风格一致） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 1. 复用主页的基础样式（重置、字体、颜色） */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            color: #1a1a2e; 
+            background: #f8f9fa; 
+        }
+
+        /* 2. 复用主页的导航栏样式（完全一致） */
+        .nav {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 15px 0;
+            margin-bottom: 40px;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .nav a {
+            color: #1a1a2e;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .nav a:hover {
+            color: #64b5f6;
+        }
+
+        /* 3. 联系页面专属样式 */
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 页面标题（与图片库一致的风格） */
+        .contact-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #64b5f6;
+        }
+        /* 联系内容布局（左右分栏，响应式） */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 桌面端左右各占50% */
+            grid-gap: 40px;
+            margin-top: 30px;
+        }
+        /* 联系信息（左侧） */
+        .contact-info {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            padding: 30px;
+        }
+        .contact-info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .contact-info-item i {
+            font-size: 20px;
+            color: #64b5f6;
+        }
+        .contact-info-item h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .contact-info-item p {
+            font-size: 14px;
+            color: #666;
+        }
+        /* 联系表单（右侧） */
+        .contact-form {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            padding: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #1a1a2e;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #64b5f6;
+        }
+        .form-group textarea {
+            height: 150px; /* 文本域高度 */
+            resize: vertical; /* 允许垂直缩放 */
+        }
+        /* 提交按钮（与主页按钮风格一致） */
+        .submit-btn {
+            background: #64b5f6;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .submit-btn:hover {
+            background: #42a5f5;
+        }
+
+        /* 4. 响应式调整（适配手机/平板） */
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr; /* 平板端单列显示（表单在下） */
+            }
+        }
+        @media (max-width: 480px) {
+            .contact-info,
+            .contact-form {
+                padding: 20px; /* 手机端减少内边距 */
+            }
+        }
+    </style>
+    <!-- 引入图标库（用于联系信息的图标） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 复用主页的导航栏（完全一致） -->
+    <div class="nav">
+        <div class="nav-container">
+            <a href="../index.html">主页</a>
+            <a href="knowledge.html">天文小知识</a>
+            <a href="diary.html">观测日记</a>
+            <a href="gallery.html">图片库</a>
+            <a href="contact.html">联系我</a> <!-- 当前页面 -->
+        </div>
+    </div>
+
+    <!-- 联系页面主内容 -->
+    <div class="contact-container">
+        <h2 class="contact-title">联系我</h2>
+        <div class="contact-content">
+            <!-- 左侧：联系信息 -->
+            <div class="contact-info">
+                <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">联系方式</h3>
+                <!-- 邮箱 -->
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h3>邮箱</h3>
+                        <p>xingkong@example.com</p>
+                    </div>
+                </div>
+                <!-- 社交媒体（示例：微信） -->
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-weixin"></i>
+                    <div>
+                        <h3>微信</h3>
+                        <p>xingkong_explore</p>
+                    </div>
+                </div>
+                <!-- 地址（示例） -->
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>地址</h3>
+                        <p>华中科技大学</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧：联系表单 -->
+            <div class="contact-form">
+                <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">给我留言</h3>
+                <form action="#" method="post"> <!-- action="#"表示暂不提交（可根据需要修改） -->
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">主题</label>
+                        <input type="text" id="subject" name="subject" placeholder="请输入留言主题" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">消息</label>
+                        <textarea id="message" name="message" placeholder="请输入您的留言内容" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">提交留言</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
